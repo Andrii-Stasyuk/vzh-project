@@ -14,7 +14,7 @@ function closeForm() {
 const nav = document.querySelector('#menu');
 console.log(nav);
 document.addEventListener('scroll' , () => {
-    if(document.documentElement.scrollTop > 160){
+    if(document.documentElement.scrollTop > 570){
        nav.style.background = "#F8F9FA";
        nav.style.boxShadow = "0 0 10px #777";
 

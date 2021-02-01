@@ -3,7 +3,6 @@ const images = [
     "winter1.jpg",
     "winter.jpg",
     "vzhwinter1.png",
-    "view.jpg",
     "servis.jpg",
     "image_portfolio_Forest.jpg",
     "house.jpg",
