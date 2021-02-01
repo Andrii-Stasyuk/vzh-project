@@ -10,3 +10,16 @@ closeBtn.addEventListener("click", closeForm);
 function closeForm() {
     formPopap.classList.remove("form-popap-active");
 }
+
+const nav = document.querySelector('#menu');
+console.log(nav);
+document.addEventListener('scroll' , () => {
+    if(document.documentElement.scrollTop > 160){
+       nav.style.background = "#F8F9FA";
+       nav.style.boxShadow = "0 0 10px #777";
+
+    } else {
+        nav.style.background = "transparent";
+        nav.style.boxShadow = "";
+    }
+})

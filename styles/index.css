@@ -25,7 +25,7 @@ header {
     /* background-image: url("../img/house-forest.png"); */
     background-size: cover;
     background-position: center;
-    width: 100vw;
+    width: 100%;
     max-height: 100vh;
     overflow: hidden;
     position: relative;
@@ -57,6 +57,12 @@ video {
     left: 0;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    z-index: 4;
+}
 h1 {
     font-size: 6.5vw;
     text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
@@ -64,10 +70,14 @@ h1 {
 
 header nav {
     display: flex;
-    margin: 0;
-    padding: 40px;
-    justify-content: space-between;
-    z-index: 3;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 10;
 }
 
 .header-p {
@@ -82,15 +92,20 @@ header nav {
  /* hello */
 
 header #menu {
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     /* text-align: center; */
     /* flex: 1; */
     font-size: 20px;
     font-weight: bold;
-    width: 30%;
+    width: 100%;
+    min-height: 100px;
+    top: 0;
+    right: 0;
+    padding-right: 20px;
     line-height: 150%;
     transition-property: transform;
     transition-duration: 1.5s;
@@ -112,6 +127,8 @@ header #menu a:hover {
 .a-menu {
     text-decoration: none;
     color: black;
+    margin-left: 15px;
+
 }
 
 a {
@@ -121,8 +138,7 @@ a {
 
 header nav {
     display: flex;
-    flex-wrap: wrap;
-    /* background-color: #F8F9FA; */
+    flex-wrap: wrap; 
 }
 
 .header-title {
@@ -246,8 +262,8 @@ header nav {
 }
 
 .curr-img {
-    width: 70%;
-    height: 60%;
+    width: 850px;
+    height: 450px;
     object-fit: cover;
 }
 
@@ -406,12 +422,13 @@ footer {
     background-color: rgba(0, 0 ,0 ,0.8);
     z-index: 10;
     transform: translateY(-100%) scale(0);
-    transition-property: transform;
-    transition-duration: 0.7s;
+    opacity: 0;
+    transition: .6s linear;
  }
 
  .form-popap-active{
     transform: translateY(0) scale(1);
+    opacity: 1;
  }
 
 .popap-close{
@@ -459,10 +476,19 @@ footer {
          margin: auto;
         width: 99%;
      }
+
+        header nav {
+           position: relative;
+           height: auto;
+        }
+
+       header  #menu {
+            position: relative;
+        }
+
      .video {
         padding-bottom: 40.25%;
     }
-
 
     h1 {
         line-height: 70px;
@@ -622,7 +648,7 @@ footer {
       }
 }
 
-@media(min-width: 1300px){
+/* @media(min-width: 1300px){
     nav {
         position: fixed;
     }
@@ -630,4 +656,4 @@ footer {
         position: fixed;
         right: 50px;
     }
-}
+} */
