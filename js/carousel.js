@@ -1,7 +1,8 @@
 
 const images = [
     "winter1.jpg",
-    "winter.jpg",
+    "winterFebruary.jpg",
+    "winterTerasa.jpg",
     "vzhwinter1.png",
     "servis.jpg",
     "image_portfolio_Forest.jpg",
